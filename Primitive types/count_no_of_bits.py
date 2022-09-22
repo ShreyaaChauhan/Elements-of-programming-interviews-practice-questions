@@ -1,5 +1,6 @@
 '''
     complexity = o(n)
+    minor change
 '''
 def count_bits(x: int) -> int:
     num_bits = 0
