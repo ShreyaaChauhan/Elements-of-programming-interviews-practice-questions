@@ -1,5 +1,6 @@
 
 <h1> Structure of every file</h1>
+
 '''-----*BRUTE FORCE APPROACH*-----*TIME COMPLEXITY-O(n)*-----*SPACE COMPLEXITY - O(n)*-----'''
 
 '''-----*OPTIMISED APPROACH*-----*TIME COMPLEXITY- *-----*SPACE COMPLEXITY - *-----'''
@@ -12,3 +13,9 @@
 
 '''-----*EXECUTION*-----'''
 
+
+# TODOs 19th October 2022
+
+Implement Linked List<br>
+Practice LinkedList Concepts<br>
+Implement Binary search using list 
