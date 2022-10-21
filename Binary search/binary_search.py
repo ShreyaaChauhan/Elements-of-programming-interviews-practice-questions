@@ -13,7 +13,24 @@ def locate_card_1(cards, query):
             return False
 
 
-"""-----*OPTIMISED APPROACH*-----*TIME COMPLEXITY- *-----*SPACE COMPLEXITY - *-----"""
+"""-----*OPTIMISED APPROACH*-----*TIME COMPLEXITY- O(log(n))*-----*SPACE COMPLEXITY -O(1) *-----"""
+
+
+def locate_card(cards, query):
+    low = 0
+    high = len(cards) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if cards[mid] == query:
+            return mid
+        elif cards[mid] < query:
+            high = mid - 1
+        elif cards[mid] > query:
+            low = mid + 1
+        else:
+            return False
 
 
 """-----*CORNER TEST CASE*-----"""
