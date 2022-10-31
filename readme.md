@@ -14,8 +14,4 @@
 '''-----*EXECUTION*-----'''
 
 
-# TODOs 19th October 2022
 
-Implement Linked List<br>
-Practice LinkedList Concepts<br>
-Implement Binary search using list 
