@@ -1,43 +1,49 @@
 #
-# Created on Wed Oct 19 2022 12:51:34 AM
+# Created on Wed Nov 02 2022 8:44:16 AM
 #
-# By:- Shreya Chauhan
+# Shreya Chauhan
 #
-# A single node of a singly linked list
-class Node:
-    # constructor
-    def __init__(self, data=None, next=None):
-        self.data = data
-        self.next = next
 
 
-# A Linked List class with a single head node
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+
 class LinkedList:
     def __init__(self):
-        self.head = None
+        self.head = ListNode(-1)
+        self.tail = self.head
 
-    # insertion method for the linked list
-    def insert(self, data):
-        newNode = Node(data)
-        if self.head:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = newNode
-        else:
-            self.head = newNode
+    def inserEnd(self, val):
+        self.tail.next = ListNode(val)
+        self.tail = self.tail.next
 
-    # print method for the linked list
-    def printLL(self):
-        current = self.head
-        while current:
-            print(current.data)
-            current = current.next
+    def remove(self, index):
+        i = 0
+        curr = self.head
+        while i < index and curr:
+            i += 1
+            curr = curr.next
+
+        if curr and curr.next:
+            if curr.next == self.tail:
+                self.tail = curr
+            curr.next = curr.next.next
+
+    def print(self):
+        curr = self.head.next
+        while curr:
+            print(curr.val, "->", end="")
+            curr = curr.next
+        print()
 
 
-# Singly Linked List with insertion and print methods
-LL = LinkedList()
-LL.insert(3)
-LL.insert(4)
-LL.insert(5)
-LL.printLL()
+list = LinkedList()
+list.inserEnd(10)
+list.inserEnd(20)
+list.inserEnd(30)
+list.inserEnd(10)
+list.remove(1)
+list.print()
